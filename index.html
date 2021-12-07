@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="03">
+	<title>After-Before</title>
+
+	<style type="text/css">
+		.wrapper{
+			margin: 20%;
+		}
+		.submit{
+			text-decoration: none;
+			font-size: 20px;
+			font-weight: 700;
+			border: 2px solid blue;
+			padding: 10px 20px;
+			position: relative;
+			color: red;
+			z-index: 1;
+		}
+
+		.submit::after{
+			content: "";
+			width: 0;
+			height: 100%;
+			background: blue;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+		.submit:hover:after{
+			width: 100%;
+			transition: 1s;
+			color: white;
+		}
+		
+	</style>
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<a href="#" class="submit">Click Me</a>
+	</div>
+
+	
+
+
+	
+</body>
+</html>
